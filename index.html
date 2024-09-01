@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="boots.css">
+    <link rel="stylesheet" href="bootw.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row d-none" id="mensagens">
+            <div class="col">
+                <div class="alert alert-danger">Cadastro incorreto</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h1>CADASTRE-SE</h1>
+                <form>
+                    <input type="text" class="form-control mb-2" id="nome" placeholder="Nome">
+                    <input type="tel" class="form-control mb-2" id="telefone" placeholder="Telefone">
+                    <input type="text" class="form-control mb-2" id="email" placeholder="Email">
+                    <select class="form-select form-select-sm mb-2" aria-label="Small select example" id="sexo">
+                        <option selected>Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                        <option value="Prefiro nao dizer">Prefiro nao dizer</option>
+                    </select>
+                    <input type="date" class="form-control mb-2" id="data" placeholder="Data">
+                    <div>
+                        <div class="col-auto">
+                            <div class="col-auto">
+                                <input type="password" id="senha" class="form-control mb-2"
+                                    aria-describedby="passwordHelpInline" placeholder="Senha">
+                            </div>
+                            <div class="col-auto">
+
+                            </div>
+                        </div>
+                        <button type="submit" id="btn_cadastrar" class="btn btn-primary mb-2">Cadastrar</button>
+                        <input type="hidden" name="id_tmp" id="id_tmp">
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>TELEFONE</th>
+                            <th>EMAIL</th>
+                            <th>SEXO</th>
+                            <th>DATA</th>
+                            <th>SENHA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista">
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="piechart" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
